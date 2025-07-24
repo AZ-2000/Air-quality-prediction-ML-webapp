@@ -1,0 +1,177 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.russo-font {
+  font-family: 'Russo One', sans-serif;
+}
+.hover-text {
+  color: rgb(246, 15, 42);        /* off-white base */
+  transition: color 0.3s ease;
+}
+.hover-text-2 {
+  color: #e4d1d1;
+ /* Example: gold */
+  transition: color 0.3s ease;
+}
+.hover-text-3 {
+  color: #820000;
+ /* Example: gold */
+  transition: color 0.3s ease;
+}
+.hover-text-3:hover {
+   color: #cccc05; /* Example: gold */
+  cursor: pointer;
+}
+.hover-text-2:hover {
+   /* color: #ffff0f;  */
+   /* Example: gold */
+   color: #ffbe47;
+  cursor: pointer;
+}
+.hover-text:hover {
+  color: #9f1212; /* Example: gold */
+  cursor: pointer;
+}
+.bg-landing {
+  background-image: url('/public/images/background3.jpg');
+  background-size: cover;
+  background-position: center 50px;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+.gradient-background {
+  /* background: linear-gradient(to bottom right, #c6e84b, #d7144c); */
+  color: white;
+}
+
+.landing-content{
+    position: relative; /* Required for z-index to take effect */
+      overflow: hidden;
+
+
+  z-index: 1;
+}
+.nav-wrapper
+{
+  position: absolute;
+  z-index: 1;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+/* 
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+} */
+
+/* @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+@keyframes mygradient {
+    0% {
+        background-position: 0% 10%
+    }
+
+    100% {
+        background-position: 100% 70%
+    }
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    margin: 0px;
+    /* background: linear-gradient(90deg, #3D74B6,#FBF5DE,#EAC8A6, #08081a); */
+    /* background: linear-gradient(90deg, #1F1C2C,#928DAB,#16222A, #3A6073); */
+    background: linear-gradient(90deg,#ffd89b, #19547b);
+
+    height: 101vh;
+    width: 100vw;
+    background-size: 600% 100%;
+    background-repeat: no-repeat;
+    animation: mygradient 5s linear infinite alternate
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    50% {
+        transform: rotate(90deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+#wave {
+  position:absolute;
+      top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+
+    
+
+}
+
+#wave:before {
+    content: '';
+    overflow: hidden;
+    position: absolute;
+    bottom: 12%;
+    left: -250vw;
+    width: 600vw;
+    height: 600vw;
+    background: rgba(0, 0, 0, .375);
+    border-radius: 48% 52% 52% 48% / 48% 52% 48% 52%;
+    animation: wave 9s ease-in-out infinite;
+    animation-delay: -3s;
+    z-index: 0;
+
+}
+
+#wave:after {
+    content: '';
+    overflow: hidden;
+    position: absolute;
+    bottom: 12%;
+    left: -250vw;
+    width: 600vw;
+    height: 600vw;
+    background: rgba(0, 0, 0, .375);
+    border-radius: 48% 52% 52% 48% / 48% 52% 48% 52%;
+    animation: wave 9s linear infinite;
+    z-index: 0;
+
+}

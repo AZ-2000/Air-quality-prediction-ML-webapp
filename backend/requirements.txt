@@ -1,0 +1,9 @@
+Flask
+requests
+xgboost
+mlflow
+prefect
+openaq
+pandas
+scikit-learn
+faiss-cpu  # Or faiss-gpu if applicable
